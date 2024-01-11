@@ -27,14 +27,14 @@ export function RandomCharacters({ children }: { children: ReactNode }) {
 	return (
 		<div
 			ref={cardRef}
-			className='group card flex items-center justify-center aspect-square relative m-4 rounded-3xl overflow-hidden cursor-pointer border'
+			className='group card flex items-center justify-center aspect-square relative rounded-3xl overflow-hidden cursor-pointer border'
 			onMouseMove={handleMouseMove}
 		>
 			<div className='card-image flex items-center justify-self-center relative z-[4]'>{children}</div>
 			<div className='card-gradient h-full w-full absolute pointer-events-none z-[3] mix-blend-darken' />
 			<div
 				ref={lettersRef}
-				className='card-letters absolute left-0 top-0 h-full w-full text-white text-xs font-medium scale-[1.03] opacity-0 transition-opacity duration-[400] group-hover:opacity-100'
+				className='card-letters absolute left-0 top-0 h-full w-full text-white text-xs font-medium scale-[1.03] opacity-0 duration-300 group-hover:opacity-100'
 			>
 				{letters}
 			</div>

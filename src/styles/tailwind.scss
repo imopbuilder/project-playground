@@ -109,18 +109,19 @@
 	body[style] {
 		margin-right: 0px !important;
 	}
-}
 
-@layer base {
-	* {
-		@apply border-border;
+	.dark {
+		--border: 12 6.5% 15.1%;
 	}
-	body {
-		@apply bg-background text-foreground;
-	}
-}
 
-@layer {
+	.card-track {
+		height: 100%;
+		width: var(--card-size);
+		display: flex;
+		align-items: center;
+		position: relative;
+	}
+
 	.card-gradient {
 		--background-light-rgb: 30 41 59;
 
@@ -154,5 +155,14 @@
 			rgb(255 255 255 / 25%),
 			transparent
 		);
+	}
+}
+
+@layer base {
+	* {
+		@apply border-border;
+	}
+	body {
+		@apply bg-background text-foreground;
 	}
 }
