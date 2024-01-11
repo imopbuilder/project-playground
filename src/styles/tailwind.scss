@@ -119,3 +119,40 @@
 		@apply bg-background text-foreground;
 	}
 }
+
+@layer {
+	.card-gradient {
+		--background-light-rgb: 30 41 59;
+
+		--hyperplexed-main-rgb: 41 121 255;
+		--hyperplexed-main-light-rgb: 56 182 255;
+		--hyperplexed-secondary-rgb: 42 252 152;
+
+		background: radial-gradient(
+			rgb(var(--background-light-rgb)) 40%,
+			rgb(var(--hyperplexed-main-rgb)) 50%,
+			rgb(var(--hyperplexed-main-light-rgb)),
+			rgb(var(--hyperplexed-secondary-rgb))
+		);
+	}
+
+	.card-letters {
+		--card-size: 480px;
+
+		--x: 0px;
+		--y: 0px;
+		word-wrap: break-word;
+		-webkit-mask-image: radial-gradient(
+			calc(var(--card-size) * 0.8) circle at var(--x) var(--y),
+			rgb(255 255 255) 20%,
+			rgb(255 255 255 / 25%),
+			transparent
+		);
+		mask-image: radial-gradient(
+			calc(var(--card-size) * 0.8) circle at var(--x) var(--y),
+			rgb(255 255 255) 20%,
+			rgb(255 255 255 / 25%),
+			transparent
+		);
+	}
+}
