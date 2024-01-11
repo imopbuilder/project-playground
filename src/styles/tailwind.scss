@@ -125,15 +125,15 @@
 	.card-gradient {
 		--background-light-rgb: 30 41 59;
 
-		--hyperplexed-main-rgb: 41 121 255;
-		--hyperplexed-main-light-rgb: 56 182 255;
-		--hyperplexed-secondary-rgb: 42 252 152;
+		--hyperplexed-main-hsl: 258 90% 66%;
+		--hyperplexed-main-light-hsl: 292 91% 73%;
+		--hyperplexed-secondary-hsl: 48 96% 53%;
 
 		background: radial-gradient(
 			rgb(var(--background-light-rgb)) 40%,
-			rgb(var(--hyperplexed-main-rgb)) 50%,
-			rgb(var(--hyperplexed-main-light-rgb)),
-			rgb(var(--hyperplexed-secondary-rgb))
+			hsl(var(--hyperplexed-main-hsl)) 50%,
+			hsl(var(--hyperplexed-main-light-hsl)),
+			hsl(var(--hyperplexed-secondary-hsl))
 		);
 	}
 
